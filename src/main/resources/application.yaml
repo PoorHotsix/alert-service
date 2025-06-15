@@ -9,6 +9,23 @@ spring:
   profiles:
     active:
     - ${SPRING_PROFILES_ACTIVE}
+  mail:
+    host: smtp.gmail.com # 1
+    port: 587 # 2
+    username: ${SPRING_MAIL_USERNAME} # 3
+    password: ${SPRING_MAIL_PASSWORD} # 4
+    properties:
+      mail:
+        smtp:
+          auth: true # 5
+          timeout: 5000 # 6
+          starttls:
+            enable: true # 7
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
   # -------------------------------------------------------------------
   #  Kafka 설정
   # -------------------------------------------------------------------  
