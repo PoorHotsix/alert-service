@@ -45,8 +45,8 @@ public class AlertMainServiceImpl implements AlertMainService {
         try {
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, false, "UTF-8");
 
-            mimeMessageHelper.setFrom(orderDto.getMember().getMemberEmail());
-            mimeMessageHelper.setTo("qnrntmvls@gmail.com");
+            mimeMessageHelper.setFrom("inkcloud@gmail.com");
+            mimeMessageHelper.setTo(orderDto.getMember().getMemberEmail());
 
             mimeMessageHelper.setSubject("[잉크클라우드] 주문이 완료되었습니다 - 주문번호: " + orderDto.getId());
 
