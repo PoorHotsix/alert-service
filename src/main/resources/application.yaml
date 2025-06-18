@@ -10,8 +10,10 @@ spring:
     active:
     - ${SPRING_PROFILES_ACTIVE}
   mail:
-    host: smtp.gmail.com # 1
-    port: 587 # 2
+    host: ${SPRING_MAIL_HOST} # 1
+    # host: smtp.gmail.com # 1
+    port: ${SPRING_MAIL_PORT} # 2
+    # port: 587 # 2
     username: ${SPRING_MAIL_USERNAME} # 3
     password: ${SPRING_MAIL_PASSWORD} # 4
     properties:
